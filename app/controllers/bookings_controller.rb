@@ -29,6 +29,7 @@ class BookingsController < ApplicationController
         format.html { redirect_to booking_url(@booking), notice: "Booking was successfully created." }
        
       else
+        format.turbo_stream { render turbo_stream: turbo_stream.replace("#{helpers.dom_id(@booking)}_form"),partial: "form", locals: {booking: @Booking}}
         format.html { render :new, status: :unprocessable_entity }
 
       end

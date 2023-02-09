@@ -1,16 +1,13 @@
 <br>
-<div id="<%= dom_id booking %>">
+<div id="<%= '#{dom_id(booking)}_bookingid' %>">
 <ul>
+<%= turbo_frame_tag dom_id(booking) do %>
  <li> <p>
     <strong>Bookingid:</strong>
-    <%= booking.bookingid %>
+    <%= link_to booking.bookingid , edit_booking_path(booking) %>
+    
   </p>
   </li>
-  <li>
-  <p>
-    <strong>Place:</strong>
-    <%= booking.place %>
-  </p>
-  </li>
+<% end %>
 </ul>
 </div>

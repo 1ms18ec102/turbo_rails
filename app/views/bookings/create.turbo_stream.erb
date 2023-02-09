@@ -1,7 +1,7 @@
 <%= turbo_stream.prepend "bookings" do %>
-<%= render 'booking', booking: @booking %>
+<%= render "booking", booking: @booking %>
 <%= end %>
 
 <%= turbo_stream.replace "#{dom_id(Booking.new)}_form" do %>
-<%= render 'form', booking=Booking.new %>
+<%= render "form", booking: Booking.new %>
 <%= end %>
