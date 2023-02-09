@@ -1,8 +1,11 @@
-<p style="color: green"><%= notice %></p>
+<div class="mx-auto max-w-3xl mt-24">
 
-<h1>Bookings</h1>
-
-<div id="bookings">
+<h1 class="font-bold text-4xl mb-6">Bookings</h1>
+<%= render 'form', booking: Booking.new %>
+<br>
+<br>
+<div class="container"><h3>Booking done</h3>
+<div id="bookings" class='divide-y list-none'>
   <% @bookings.each do |booking| %>
     <%= render booking %>
     <p>
@@ -12,3 +15,5 @@
 </div>
 
 <%= link_to "New booking", new_booking_path %>
+</div>
+</div>
