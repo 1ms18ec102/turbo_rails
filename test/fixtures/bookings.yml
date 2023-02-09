@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bookingid: MyString
+  place: MyString
+
+two:
+  bookingid: MyString
+  place: MyString
