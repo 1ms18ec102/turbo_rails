@@ -54,6 +54,7 @@ class BookingsController < ApplicationController
     @booking.destroy
 
     respond_to do |format|
+      format.turbo_stream {render turbo_stream: turbo_stream.remove("#{helpers.dom_id(@booking)}_item")}
       format.html { redirect_to bookings_url, notice: "Booking was successfully destroyed." }
       format.json { head :no_content }
     end
